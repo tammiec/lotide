@@ -41,3 +41,6 @@ const numbers = [1, 2, 3, 4, 5];
 console.log(without(numbers, [4]));
 assertArraysEqual(numbers, [1, 2, 3, 4, 5]);
 assertArraysEqual(without(numbers, [4]), [1, 2, 3, 4, 5]);
+
+const numbers2 = [1, 2, 1, 5, 7, 5];
+console.log(without(numbers2, [1, 5]));
