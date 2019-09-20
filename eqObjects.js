@@ -25,7 +25,7 @@ const eqObjects = function(obj1, obj2) {
   if (obj1Keys.length !== obj2Keys.length) {
     return false;
   }
-  // for (let i = 0; i < obj2Keys.length; i++) {
+
   for (let key of obj1Keys) {
     if (typeof obj1[key] === 'object') {
       if (Array.isArray(obj1[key]) && !eqArrays(obj1[key], obj2[key])) {
