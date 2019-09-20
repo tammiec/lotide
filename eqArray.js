@@ -17,8 +17,8 @@ const eqArrays = function(array1, array2) {
         return false;
       }
     } else {
-    if (array1[i] !== array2[i]) {
-      return false;
+      if (array1[i] !== array2[i]) {
+        return false;
       }
     }
   }
@@ -34,4 +34,4 @@ assertEqual(eqArrays(["hello", "goodbye"], ["hello", "goodbye"]), true);
 assertEqual(eqArrays([[2, 3], [4]], [[2, 3], [4]]), true);
 assertEqual(eqArrays([[2, 3], [4]], [[2, 3], [4, 5]]), false);
 assertEqual(eqArrays([[2, 3], [4]], [[2, 3], 4]), false);
-assertEqual(eqArrays([[2, 3], [4, [6, 7]]], [[2, 3], [4, [6, 7]]]), true)
+assertEqual(eqArrays([[2, 3], [4, [6, 7]]], [[2, 3], [4, [6, 7]]]), true);
