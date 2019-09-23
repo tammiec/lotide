@@ -1,8 +1,9 @@
 // ACTUAL FUNCTION
 const letterPositions = function(sentence) {
+  const allLower = sentence.toLowerCase();
   const results = {};
-  for (let i = 0; i < sentence.length; i++) {
-    let letter = sentence[i];
+  for (let i = 0; i < allLower.length; i++) {
+    let letter = allLower[i];
     if (letter !== ' ') {
       if (results[letter]) {
         results[letter].push(i);
