@@ -29,8 +29,8 @@ The following functions are currently implemented:
 * `assertArraysEqual(actual, expected)`: it will log an assertion statement. Used to two compare arrays
 * `assertEqual(x, y)`: returns true if its two parameters are the same.
 * `assertObjectEqual(object1, object2)`: returns true if the objects passed in are identical, otherwise returns false.
-* `countLetters(string)`: takes in a string, and returns an object with the number of occurances ofeach letter found in the string.
-* `countOnly(array, object)`: takes in an array of strings, and an object whose key values are boolean. It returns an object that shows how many occurances of each key that is TRUE was found in the array.
+* `countLetters(string)`: takes in a string, and returns an object with the number of occurrences ofeach letter found in the string.
+* `countOnly(array, object)`: takes in an array of strings, and an object whose key values are boolean. It returns an object that shows how many occurrences of each key that is TRUE was found in the array.
 * `eqArrays(array1 array2)`: returns true the arrays passed into it are identical. otherwise returns false
 * `eqObjects(object1, object2)`: returns true the objects passed into it are identical. otherwise returns false
 * `findKey(object, callback)`: takes in an object and a callback function. It returns the first key for which the callback returns truthy. If no key is found, it returns undefined.
