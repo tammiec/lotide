@@ -25,7 +25,7 @@ describe("#findKeyByValue", () => {
   it("shouldn't return police for Brooklyn Nine-Nine", () => {
     assert.notStrictEqual(findKeyByValue(bestTVShowsByGenre, "Brooklyn Nine-Nine"), "police");
   });
-  it("should return 'two'...", () => {
+  it("should return 'two' for 2", () => {
     assert.strictEqual(findKeyByValue(nums, 2), "two");
   });
 });

@@ -11,13 +11,13 @@ describe("#findKey", () => {
     "Akelarre":  { stars: 3 }
   };
   
-  it("should return noma...", () => {
+  it("should return noma when input is x => x.stars === 2", () => {
     assert.equal(findKey(ob, x => x.stars === 2), "noma");
   });
   it("should return undefined if key doesn't exist", () => {
     assert.isUndefined(findKey(ob, x => x.stars === 5));
   });
-  it("should return Akaleri...", () => {
+  it("should return first instance of truthiness", () => {
     assert.equal(findKey(ob, x => x.stars > 2), "Akaleri");
   });
 });
