@@ -1,4 +1,3 @@
-// ACTUAL FUNCTION
 const letterPositions = function(sentence) {
   const allLower = sentence.toLowerCase();
   const results = {};
