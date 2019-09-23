@@ -1,19 +1,17 @@
-const assertArraysEqual = require('../assertArraysEqual');
-const takeUntil = require('../takeUntil');
-// TEST RESULTS
-const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
-const results1 = takeUntil(data1, x => x < 0);
-assertArraysEqual(results1, [1, 2, 5, 7, 2]);
-
-console.log('---');
-
-const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
-const results2 = takeUntil(data2, x => x === ',');
-assertArraysEqual(results2, ["I've", "been", "to", "Hollywood"]);
-
-console.log('---');
-
-const data3 = [1, 2, 3, 4];
-const results3 = takeUntil(data3, x => x > 6);
-console.log(results3);
-assertArraysEqual(results3, [1, 2, 3, 4]);
+const takeUntil = require("../takeUntil");
+const assert = require("chai").assert;
+describe("#takeUntil", () => {
+  it("should return an array...", () => {
+    const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
+    assert.deepEqual(takeUntil(data1, x => x < 0), [1,2,5,7,2]);
+  });
+  it("should return the whole array if callback never returns truthy", () => {
+    assert.deepEqual(takeUntil([1,2,3,4], x => x > 4), [1,2,3,4]);
+  });
+  it("should return an empty array when passed an empty array", () => {
+    assert.deepEqual(takeUntil([], x => x > 4), []);
+  });
+  it("should return...", () => {
+    assert.deepEqual(takeUntil([1,2,3,4], x => x > 0), []);
+  });
+});

@@ -1,4 +1,3 @@
-// MAP FUNCTION
 const map = function(array, callback) {
   const results = [];
   for (let item of array) {
