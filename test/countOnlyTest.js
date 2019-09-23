@@ -1,23 +1,29 @@
-const assertEqual = require('../assertEqual');
 const countOnly = require('../countOnly');
+const assert = require('chai').assert;
 
-// TEST CODE
-const firstNames = [
-  "Karl",
-  "Salima",
-  "Agouhanna",
-  "Fang",
-  "Kavith",
-  "Jason",
-  "Salima",
-  "Fang",
-  "Joe",
-  "Agouhanna"
-];
+describe('#countOnly', () => {
+  const firstNames = [
+    "Karl",
+    "Salima",
+    "Agouhanna",
+    "Fang",
+    "Kavith",
+    "Jason",
+    "Salima",
+    "Fang",
+    "Joe",
+    "Agouhanna"
+  ];
 
-const result1 = countOnly(firstNames, { "Jason": false, "Karima": true, "Fang": true, 'Agouhanna': true});
+  const namesToCount = { "Jason": true, "Karima": true, "Fang": true, 'Agouhanna': true};
 
-assertEqual(result1["Jason"], 1);
-assertEqual(result1["Karima"], undefined);
-assertEqual(result1["Fang"], 2);
-assertEqual(result1["Agouhanna"], 2);
+  it("should return 1 when for Jason's count", () => {
+    assert.strictEqual((countOnly(firstNames, namesToCount)['Jason']), 1);
+  });
+  it('should return undefined for Karima', () => {
+    assert.strictEqual(countOnly(firstNames, namesToCount).Karima, undefined);
+  });
+  it('should return 2 for Fang', () => {
+    assert.strictEqual(countOnly(firstNames, namesToCount).Fang, 2);
+  });
+});
